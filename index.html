@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сланцевская межрайонная больница</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            border-bottom: #34495e 3px solid;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            float: left;
+            height: 60px;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            display: inline;
+            font-size: 28px;
+            line-height: 60px;
+            font-family: 'Lora', serif;
+        }
+
+        nav {
+            float: right;
+            margin-top: 15px;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            padding: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            display: none;
+            margin-bottom: 40px;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            color: #2c3e50;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 10px;
+        }
+
+        p, ul {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .scrollToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 20px;
+            z-index: 9999;
+        }
+
+        .scrollToTop:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="Логотип Сланцевской межрайонной больницы">
+            <h1>ГБУ ЛО «Сланцевская межрайонная больница»</h1>
+            <nav>
+                <ul>
+                    <li><a onclick="showSection('about')">О нас</a></li>
+                    <li><a onclick="showSection('services')">Услуги</a></li>
+                    <li><a onclick="showSection('schedule')">Расписание врачей</a></li>
+                    <li><a onclick="showSection('contacts')">Контакты</a></li>
+                    <li><a onclick="showSection('gallery')">Галерея</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="container content active">
+            <h2>О нас</h2>
+            <p>Сланцевская межрайонная больница предоставляет высококачественные медицинские услуги с использованием современных технологий и оборудования.</p>
+            <p>Наш адрес: Ленинградская область, город Сланцы, улица Гагарина, дом 2.</p>
+            <img src="hospital-building.jpg" alt="Здание больницы">
+            <p>Наша больница была основана в 1950 году и с тех пор мы стремимся обеспечивать нашим пациентам лучший уровень медицинского обслуживания. Наши врачи являются экспертами в своих областях и постоянно повышают свою квалификацию.</p>
+        </section>
+
+        <section id="services" class="container content">
+            <h2>Услуги</h2>
+            <ul>
+                <li>Терапия</li>
+                <li>Хирургия</li>
+                <li>Кардиология</li>
+                <li>Педиатрия</li>
+                <li>Гинекология</li>
+                <li>Диагностика</li>
+                <li>Реабилитация</li>
+            </ul>
+            <img src="medical-services.jpg" alt="Медицинские услуги" width="700">
+            <p>Наши услуги включают широкий спектр диагностических и лечебных процедур. Мы предлагаем индивидуальный подход к каждому пациенту, обеспечивая эффективное и безопасное лечение.</p>
+        </section>
+
+        <section id="schedule" class="container content">
+            <h2>Расписание врачей</h2>
+            <table>
+                <tr>
+                    <th>Врач</th>
+                    <th>Специальность</th>
+                    <th>Время приема</th>
+                </tr>
+                <tr>
+                    <td>Иванов Иван Иванович</td>
+                    <td>Терапевт</td>
+                    <td>Понедельник - Пятница: 09:00 - 17:00</td>
+                </tr>
+                <tr>
+                    <td>Петров Петр Петрович</td>
+                    <td>Хирург</td>
+                    <td>Понедельник - Пятница: 10:00 - 18:00</td>
+                </tr>
+                <tr>
+                    <td>Сидорова Анна Сергеевна</td>
+                    <td>Кардиолог</td>
+                    <td>Понедельник - Пятница: 08:00 - 16:00</td>
+                </tr>
+                <tr>
+                    <td>Кузнецова Марина Николаевна</td>
+                    <td>Педиатр</td>
+                    <td>Понедельник - Пятница: 09:00 - 15:00</td>
+                </tr>
+                <tr>
+                    <td>Васильев Сергей Павлович</td>
+                    <td>Гинеколог</td>
+                    <td>Понедельник - Пятница: 10:00 - 18:00</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contacts" class="container content">
+            <h2>Контакты</h2>
+            <p>Адрес: Россия, Ленинградская область, город Сланцы, улица Гагарина, дом 2</p>
+            <p> <a href="sms:+79319733219?body=Сообщение">Написать нам</a> </p>
+            <p>Email: slanzyhospital@mail.ru</p>
+            <p>Мы всегда рады помочь вам и ответить на все ваши вопросы. Наши контактные данные указаны выше, не стесняйтесь обращаться к нам в любое время.</p>
+<p>QR код для предоставления ссылки на сайт.</p>
+
+<img src="qr.jpg" alt="QR-код">
+        </section>
+
+        <section id="gallery" class="container content">
+            <h2>Галерея</h2>
+            <div class="image-gallery">
+                <img src="hospital-interior.jpg" alt="Интерьер больницы" style="
+
+max-width: 700px; max-height: 700px;">
+                <img src="medical-equipment.jpg" alt="Медицинское оборудование" style="max-width: 700px; max-height: 700px;">
+                <img src="hospital-staff.jpg" alt="Персонал больницы" style="max-width: 700px; max-height: 700px;">
+            </div>
+            <p>Добро пожаловать в нашу галерею. Здесь вы можете увидеть фотографии наших помещений, медицинского оборудования и дружелюбного персонала.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Автор сайта корпоративной поликлиники: Сидоров Эмиль Рустамович</p>
+        </div>
+    </footer>
+
+    <a href="#" class="scrollToTop">Наверх</a>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        window.addEventListener("scroll", function () {
+            var scrollToTopButton = document.querySelector(".scrollToTop");
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+
+        document.querySelector(".scrollToTop").addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>
